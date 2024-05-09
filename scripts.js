@@ -5,6 +5,12 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
-  const quotient = Math.floor(dividend / divider);
-  result.innerText = quotient
+
+  if (dividend  === "" || divider === ""){
+    result.innerText = "Division not performed. Both values are required in inputs. Try again";
+  } else{
+    const quotient = Math.floor(dividend / divider);
+    result.innerText = quotient
+  }
+  
 });
