@@ -7,7 +7,7 @@ form.addEventListener("submit", (event) => {
   const { dividend, divider } = Object.fromEntries(entries);
 
   if (isNaN(dividend) || isNaN(divider) || dividend === "" || divider === ""){
-    result.innerText = "Division not performed. Both values are required in inputs. Try again";
+    result.innerText = "Something critical went wrong. Please reload the page.";
     console.error("Error: Non-numeric value provided.");
     return;
   } 
